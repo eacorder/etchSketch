@@ -1,0 +1,41 @@
+body, html, .container {
+    margin: 0;
+    height: 100%; 
+}
+ 
+
+.leftContent {
+    flex-basis: 40%;
+    background-color: turquoise;
+    border-right: 4px solid;
+}
+
+.rightContent {
+    align-items: center;
+    justify-content: center;
+}
+
+.grid {    
+    box-shadow:  2px 2px 2px 3px;
+    height: 500px;
+    width: 500px;
+    align-content: start;
+    justify-content: start; 
+    flex-wrap: wrap;
+    border-radius: 5px;
+     
+   
+
+}
+
+.cell {
+    flex: 0 0 auto;
+    width: 29.25px;
+    height: 29.25px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.hoverCell {
+    background-color: turquoise;
+}
