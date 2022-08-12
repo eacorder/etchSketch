@@ -8,7 +8,7 @@ const rangeDesc = document.querySelector(".rangeDesc");
 let rangeSize = 16;
 let color = false;
 let x, y, z, bgColor;
- 
+let cells;
 cell.classList.add('cell'); 
 
 fillGrid(rangeSize);
@@ -30,11 +30,12 @@ function fillGrid(value) {
     for (let i=0 ; i<rangeSize; i++) { 
         grid.appendChild(cell.cloneNode(true));
     }
-    const cells = document.querySelectorAll(".cell");
+    cells = document.querySelectorAll(".cell");
 
     cells.forEach((item) => {
 
         // and for each one we add a 'click' listener
+        
         item.addEventListener('mouseover', () => {
             if ( color === true ) {
                     x = Math.floor(Math.random() * 256);
@@ -44,7 +45,7 @@ function fillGrid(value) {
             
                 item.style.backgroundColor = bgColor;
             }else {
-                item.style.backgroundColor = "turquoise";
+                item.style.backgroundColor = "turquoise"; 
             }
             
         });
@@ -52,6 +53,7 @@ function fillGrid(value) {
 }
 
 clean.addEventListener('click', () =>{
+    cells = document.querySelectorAll(".cell");
     cells.forEach((item) => {  
         item.style.backgroundColor = "transparent";
     });
