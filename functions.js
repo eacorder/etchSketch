@@ -13,12 +13,13 @@ cell.classList.add('cell');
 
 fillGrid(rangeSize);
 
-
-
+// event listener for the range input 
 range.addEventListener("input", function() {
     fillGrid(range.value)
 }, false);      
 
+
+// logic for filling the grid and coloring the grid 
 function fillGrid(value) {
     rangeSize = value * value ;
     rangeDesc.innerHTML = value + ' x ' + value;
@@ -52,6 +53,7 @@ function fillGrid(value) {
     });
 }
 
+// clean button functionality clean grid
 clean.addEventListener('click', () =>{
     cells = document.querySelectorAll(".cell");
     cells.forEach((item) => {  
@@ -59,6 +61,7 @@ clean.addEventListener('click', () =>{
     });
 });
 
+//validations for classic button
 classic.addEventListener('click', () => {
     classic.classList.toggle('buttonHover');
     classic.disabled = true
@@ -66,7 +69,8 @@ classic.addEventListener('click', () => {
     multiColor.classList.toggle('buttonHover');
     color = false;
  });
-
+ 
+ //validations for multicolor button
  multiColor.addEventListener('click', () => {
     multiColor.classList.toggle('buttonHover');
     classic.classList.toggle('buttonHover');
