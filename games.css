@@ -75,3 +75,8 @@ button:focus-visible{
 .halfSpace {
     flex: 1;
 }
+
+.buttonHover { 
+    box-shadow: 4px 4px 0 #000;
+    transform: translate(-4px,-4px);
+}
